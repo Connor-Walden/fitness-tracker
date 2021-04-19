@@ -20,12 +20,18 @@ const exerciseSchema = new Schema({
     },
     sets: { 
         type: String,
+    },
+    distance: {
+        type: Number
     }
 });
 
 const workoutSchema = new Schema({
   day: {
     type: Date,
+  },
+  totalDuration: {
+      type: Number,
   },
   exercises: [
       exerciseSchema
